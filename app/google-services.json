@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "275065821522",
+    "firebase_url": "https://bookinglab-474f4-default-rtdb.firebaseio.com",
+    "project_id": "bookinglab-474f4",
+    "storage_bucket": "bookinglab-474f4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275065821522:android:7c44cc4c1eca2c29ca428b",
+        "android_client_info": {
+          "package_name": "com.example.booking_lab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfYGnpSr1HzQ1r-ebIKLuEWlhm6UtObNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
