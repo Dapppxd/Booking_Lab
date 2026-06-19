@@ -27,3 +27,13 @@ Aplikasi ini membagi hak akses ke dalam dua *role* pengguna:
 1. Lakukan *clone* repository ini ke lokal:
    ```bash
    git clone [https://github.com/](https://github.com/)[USERNAME-GITHUB-KAMU]/[NAMA-REPO-KAMU].git
+
+## Tentang Proyek
+
+SiPela dikembangkan sebagai proyek kolaborasi untuk mendigitalisasi sistem peminjaman laboratorium di lingkungan kampus. Proyek ini bertujuan untuk menyelesaikan masalah bentrok jadwal dengan mengubah sistem *booking* manual berbasis formulir menjadi sistem *one-click reservasi* yang efisien. 
+
+**Dikembangkan oleh Tim:**
+* Daffa Afnandra Wahyuwono Pratama
+* I'zaz Ananda Gusti Nohan
+* Muhammad Zamroni Nuril Akbar Wiliansyah
+* Novaldo Akhmad Khudlaifi
