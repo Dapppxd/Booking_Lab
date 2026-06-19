@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.booking_lab.R
 import com.example.booking_lab.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class LoginFragment : Fragment() {
 
@@ -52,14 +53,25 @@ class LoginFragment : Fragment() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        // Jika cocok dan berhasil masuk
-                        Toast.makeText(requireContext(), "Login Berhasil!", Toast.LENGTH_SHORT).show()
-                        kembalikanTombol()
+                        val userId = auth.currentUser?.uid ?: ""
+                        val dbRef = FirebaseDatabase.getInstance().getReference("users").child(userId)
 
-                        findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
+                        dbRef.get().addOnSuccessListener { snapshot ->
+                            val role = snapshot.child("role").value.toString()
+                            Toast.makeText(requireContext(), "Login sebagai ${role.uppercase()}", Toast.LENGTH_SHORT).show()
+                            kembalikanTombol()
 
+                            // Arahkan ke dashboard yang sesuai
+                            if (role == "admin") {
+                                findNavController().navigate(R.id.action_loginFragment_to_adminDashboardFragment)
+                            } else {
+                                findNavController().navigate(R.id.action_loginFragment_to_dashboardFragment)
+                            }
+                        }.addOnFailureListener {
+                            Toast.makeText(requireContext(), "Gagal mengambil role", Toast.LENGTH_SHORT).show()
+                            kembalikanTombol()
+                        }
                     } else {
-                        // Jika gagal (email tidak terdaftar atau password salah)
                         Toast.makeText(requireContext(), "Login Gagal: Email atau Password salah", Toast.LENGTH_SHORT).show()
                         kembalikanTombol()
                     }

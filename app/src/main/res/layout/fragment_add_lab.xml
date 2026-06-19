@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Sesi Lab"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/etNamaLabAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nama Lab (Misal: Lab Komputer)"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etTanggalAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal (Misal: 25/06/2026)"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etWaktuAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Waktu (Misal: 08:00 - 10:00)"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSimpanLab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simpan Jadwal" />
+</LinearLayout>
