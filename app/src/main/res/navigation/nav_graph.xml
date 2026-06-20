@@ -70,4 +70,14 @@
         android:label="Tambah Lab"
         tools:layout="@layout/fragment_add_lab" />
 
+    <fragment
+        android:id="@+id/pilihJadwalFragment"
+        android:name="com.example.booking_lab.ui.PilihJadwalFragment"
+        android:label="Pilih Jadwal"
+        tools:layout="@layout/fragment_pilih_jadwal" />
+    <action
+        android:id="@+id/action_dashboardFragment_to_pilihJadwalFragment"
+        app:destination="@id/pilihJadwalFragment" />
+        />
+
 </navigation>

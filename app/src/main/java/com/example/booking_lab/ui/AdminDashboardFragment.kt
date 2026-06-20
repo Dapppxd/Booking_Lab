@@ -22,11 +22,11 @@ class AdminDashboardFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnTambahLab.setOnClickListener {
+        binding.fabAdd.setOnClickListener {
             findNavController().navigate(R.id.action_adminDashboardFragment_to_addLabFragment)
         }
 
-        binding.btnLogoutAdmin.setOnClickListener {
+        binding.btnSettingsAdmin.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             findNavController().navigate(R.id.action_adminDashboardFragment_to_loginFragment)
         }

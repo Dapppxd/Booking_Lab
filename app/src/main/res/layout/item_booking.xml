@@ -3,45 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    app:cardCornerRadius="12dp"
+    android:layout_marginBottom="16dp"
+    app:cardBackgroundColor="@color/main_color"
+    app:cardCornerRadius="16dp"
     app:cardElevation="2dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp">
+            android:layout_toStartOf="@+id/ivArrow"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvNamaLabItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nama Lab"
-                android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvStatusItem"
+                android:id="@+id/tvWaktuItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="Status"
-                android:textStyle="bold" />
-        </RelativeLayout>
+                android:layout_marginTop="4dp"
+                android:text="Gedung - Waktu"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvWaktuItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tanggal &amp; Waktu"
-            android:textSize="14sp" />
-
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_media_next"
+            app:tint="@color/white" />
+    </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>
